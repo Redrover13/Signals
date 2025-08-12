@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
-import { healthRoutes } from './routes/health';
-import { agentsRoutes } from './routes/agents';
+import { healthRoutes } from './routes/health.js';
+import { agentsRoutes } from './routes/agents.js';
 
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const fastify = Fastify({ logger: true });

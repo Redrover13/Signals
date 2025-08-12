@@ -1,0 +1,25 @@
+{
+  "name": "web",
+  "sourceRoot": "apps/web",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "dev"
+      }
+    },
+    "build": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "build"
+      }
+    },
+    "start": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "start"
+      }
+    }
+  }
+}

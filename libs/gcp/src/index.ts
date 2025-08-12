@@ -78,7 +78,7 @@ export async function getGoogleCloudCredentials(): Promise<{
       error
     );
     throw new GcpInitializationError(
-      error.message ||
+      error instanceof Error ? error.message :
         'An unknown error occurred while fetching GCP credentials.'
     );
   }
@@ -99,7 +99,7 @@ export const getBigQueryClient = memoize((): BigQuery => {
   } catch (error) {
     console.error('Failed to initialize BigQuery client. Lỗi khởi tạo BigQuery client.', error);
     throw new GcpInitializationError(
-      error.message || 'Could not instantiate BigQuery client.'
+      error instanceof Error ? error.message : 'Could not instantiate BigQuery client.'
     );
   }
 });
@@ -119,7 +119,7 @@ export const getStorageClient = memoize((): Storage => {
   } catch (error) {
     console.error('Failed to initialize Storage client. Lỗi khởi tạo Storage client.', error);
     throw new GcpInitializationError(
-      error.message || 'Could not instantiate Storage client.'
+      error instanceof Error ? error.message : 'Could not instantiate Storage client.'
     );
   }
 });
@@ -144,7 +144,7 @@ export const getVertexAIClient = memoize(
     } catch (error) {
       console.error('Failed to initialize Vertex AI client. Lỗi khởi tạo Vertex AI client.', error);
       throw new GcpInitializationError(
-        error.message || 'Could not instantiate Vertex AI client.'
+        error instanceof Error ? error.message : 'Could not instantiate Vertex AI client.'
       );
     }
   }

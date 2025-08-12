@@ -9,7 +9,9 @@
   },
   "scripts": {
     "nx": "nx",
-    "start": "nx serve",
+    "start": "nx serve api",
+    "start:web": "nx serve web",
+    "start:api": "nx serve api",
     "build": "nx build",
     "test": "nx test",
     "lint": "nx lint",
