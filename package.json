@@ -44,7 +44,7 @@
     "jest-environment-node": "^30.0.2",
     "jest-util": "^30.0.2",
     "jsonc-eslint-parser": "^2.1.0",
-    "koa": "^2.16.2",
+    "koa": "^3.0.1",
     "nx": "21.4.0",
     "prettier": "^3.6.2",
     "secretlint": "^11.0.2",
